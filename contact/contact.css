@@ -1,0 +1,155 @@
+/* Import global styles for navbar */
+@import url('../global.css');
+
+/* Reset defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* General styles */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-family: 'Lexend', sans-serif;
+  background: #FFF9E9; /* Match index.css */
+}
+
+/* Container styling similar to index.css */
+.container {
+  width: 100%;
+  max-width: 1240px; /* Match full-width-wrapper */
+  margin: 0 auto;
+  padding: 100px 20px; /* Match section padding in index.css */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* Match gap in index.css sections */
+  min-height: 600px; /* Match section min-height */
+}
+
+/* Form wrapper for content */
+.form-wrapper {
+  background-color: #FFFFFF;
+  padding: 20px;
+  border: 3px solid #40362C; /* Match neobrutalist border */
+  border-radius: 8px;
+  box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.1); /* Match selected-text shadow */
+  width: 100%;
+  max-width: 448px; /* Keep narrower form width */
+  box-sizing: border-box;
+}
+
+h2 {
+  font-size: 1.5rem; /* Match h4 in index.css */
+  font-weight: 700;
+  color: #40362C; /* Match text color from index.css */
+  margin-bottom: 20px; /* Match p margin in index.css */
+  text-align: center;
+}
+
+p {
+  color: #555; /* Match selected-text p color */
+  font-size: 0.9rem; /* Match selected-text p */
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+form label {
+  display: block;
+  margin-bottom: 4px;
+  color: #40362C; /* Match button text color */
+  font-size: 1rem; /* Match button font-size */
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 8px;
+  border: 3px solid #40362C; /* Match neobrutalist border */
+  border-radius: 8px; /* Match button radius */
+  outline: none;
+  font-family: 'Lexend', sans-serif;
+  font-size: 1rem;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #FFC942; /* Match button background */
+  box-shadow: 0 0 0 2px #FFDB80; /* Match hover color */
+}
+
+form textarea {
+  min-height: 96px;
+  resize: vertical;
+}
+
+form label:not(:first-child) {
+  margin-top: 16px;
+}
+
+.send-button {
+  color: #40362C;
+  font-family: 'Lexend', sans-serif;
+  background-color: #FFC942;
+  width: 100%;
+  min-height: 40px;
+  border-radius: 8px;
+  font-size: 1rem;
+  border: 3px solid #40362C;
+  box-shadow: 2px 2px 1px rgba(0, 0, 0, 1); /* Match find-texts-button */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #FFDB80; /* Match find-texts-button hover */
+  box-shadow: none; /* Match find-texts-button hover */
+}
+
+/* Footer */
+.footer {
+  width: 100%;
+  background-color: #FFF9E9;
+  padding: 20px;
+  text-align: center;
+}
+
+.full-width-wrapper {
+  width: 100%;
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.footer p {
+  color: #40362C;
+  font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 20px; /* Match index.css mobile */
+  }
+
+  .form-wrapper {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 768px) {
+  html {
+    
+  }
+
+  .container {
+    padding: 120px 20px; /* Match index.css desktop */
+  }
+}

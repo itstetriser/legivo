@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Panel</title>
+
+  <!-- Firebase CDN -->
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.17.1/firebase-firestore.js"></script>
+
+  <link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+  <a href="../index.html" style="color:azure; text-decoration: none; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px;">Homepage</a>
+  <a href="../vocadmin/vocadmin.html" style="color:azure; text-decoration: none; font-size: 20px; font-weight: bold; margin-left: 20px; margin-top: 20px;">Add words</a>
+  <div class="container">
+    <h1>Admin Panel</h1>
+
+    <!-- Add Text Form -->
+    <section>
+      <h2>Add Text</h2>
+      <form id="text-form">
+        <label for="text-id">Text ID:</label>
+        <input type="text" id="text-id" placeholder="Enter Text ID" required />
+
+        <label for="text-content">Text Content:</label>
+        <textarea id="text-content" placeholder="Enter text content" required></textarea>
+
+        <label for="text-no">Text No:</label>
+        <textarea id="text-no" placeholder="Enter text no" required></textarea>
+
+        <button type="submit">Add Text</button>
+      </form>
+    </section>
+
+    <!-- Add Multiple-Choice Question Form -->
+    <section>
+      <h2>Add Multiple-Choice Questions</h2>
+      <form id="mc-question-form">
+        <label for="text-id-mc">Text ID:</label>
+        <input type="text" id="text-id-mc" placeholder="Enter Text ID" required />
+
+        <label for="mc-questions-input">Questions (format: question1--option1:option2:option3:option4:option5--correctoption >> question2--option1:option2:option3:option4:option5--correctoption):</label>
+        <textarea id="mc-questions-input" placeholder="Enter multiple-choice questions in the specified format" required></textarea>
+
+        <button type="submit">Add Multiple-Choice Questions</button>
+      </form>
+    </section>
+
+    <!-- Add True/False Question Form -->
+    <section>
+      <h2>Add True/False Questions</h2>
+      <form id="tf-question-form">
+        <label for="text-id-tf">Text ID:</label>
+        <input type="text" id="text-id-tf" placeholder="Enter Text ID" required />
+
+        <label for="tf-questions-input">Statements (format: statement--answer(as true or false) >> statement--answer):</label>
+        <textarea id="tf-questions-input" placeholder="Enter true/false statements in the specified format" required></textarea>
+
+        <button type="submit">Add True/False Questions</button>
+      </form>
+    </section>
+
+    <!-- Add Words Form -->
+    <section>
+      <h2>Add Words</h2>
+      <form id="words-form">
+        <label for="text-id-words">Text ID:</label>
+        <input type="text" id="text-id-words" placeholder="Enter Text ID" required />
+
+        <label for="words-input">Words (i will give you a text and words taken from the text. I want you to give me some info about the words in the format i will provide: format: word1:baseform(this is the form without inflection like plural s, ing, ed[unless it is adjective] etc):definition:tos:synonyms:examplesentence:examplesentence2(make sure this one the examplesentece3 use the word exactly in the form that is in "word1", not base form)&examplesentence3 >> word1:baseform(this is the form without inflection like plural s, ing, ed[unless it is adjective] etc):definition:tos:synonyms:examplesentence:examplesentence2(make sure this one the examplesentece3 use the word exactly in the form that is in "word2", not base form)&examplesentence3 >>
+
+          Here is an example:
+          
+          drinking:drink:to get liquid into your body:verb:swallow, sip:He likes to drink a cup of coffee every morning:Did you drink all the milk yesterday?&If you go to gym, don't forget to drink water >>
+          
+          here is the text : 
+          
+          Here are the words: :</label>
+        <textarea id="words-input" placeholder="Enter words in the specified format" required></textarea>
+
+        <button type="submit">Add Words</button>
+      </form>
+    </section>
+  </div>
+
+  <!-- Your custom JS file -->
+  <script type="module" src="admin.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400&display=swap" rel="stylesheet">
+    <!-- Google tag (gtag.js) -->
+
+</head>
+<body>
+    <nav class="navbar">
+        <a href="../index.html" class="logo">Legivo</a>
+        <button class="menu-toggle">&#9776;</button> <!-- Hamburger icon -->
+        <ul class="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../search/search.html">Texts</a></li>
+            <li><a href="../contact/contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <h2>Got Something to Say?</h2>
+        <p>Found a glitch? Got a cool idea? Drop me a line!</p>
+        <form action="https://formspree.io/f/mldjrqwd" method="POST">
+            <label>
+                Your Name:
+                <input type="text" name="name" placeholder="What’s your name?">
+            </label>
+            <label>
+                Your Email:
+                <input type="email" name="email" placeholder="Where can I reply?">
+            </label>
+            <label>
+                What’s Up?:
+                <textarea name="message" placeholder="Tell me everything..."></textarea>
+            </label>
+            <button type="submit" class="send-button">Send It!</button>
+        </form>
+    </div>
+    <footer class="footer">
+        <div class="full-width-wrapper">
+            <p>&copy; 2025 Legivo. All rights reserved.</p>
+        </div>
+    </footer>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

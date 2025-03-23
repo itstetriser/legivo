@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+/* General Styles */
+body {
+    background: #FFF9E9;
+    color: #000;
+    line-height: 1.6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 16px;
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Main Container */
+#all-content {
+    margin-top: 40px;
+    max-width: 1240px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    gap: 20px;
+    padding: 0 20px;
+    box-sizing: border-box;
+    position: relative;
+}
+
+/* Noise texture for main container */
+#all-content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+   
+    pointer-events: none;
+}
+
+/* Text and Questions Section */
+#text-and-questions {
+    display: flex;
+    flex-direction: column;
+    background: transparent;
+    padding: 20px;
+    border: 4px solid #FFDB80;
+}
+
+/* Title Styling */
+#text-title {
+    font-size: 2rem;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #000;
+    letter-spacing: -1px;
+}
+
+/* Text Content Styling */
+#text-content {
+    padding: 20px;
+    margin-bottom: 20px;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+#text-content p {
+    margin-bottom: 10px;
+}
+
+#text-content strong {
+    color: #000;
+}
+
+/* Clickable Words (Base Styles) */
+.clickable-word {
+    cursor: pointer;
+    color: #000;
+    font-weight: 700;
+    background-color: #FFF9E9;
+    
+}
+
+/* Desktop Hover */
+@media screen and (min-width: 769px) {
+    .clickable-word:hover {
+        color: #272726; /* Softer accent */
+        
+    }
+
+    .clickable-word.highlighted {
+        color: #313130;
+        
+    }
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+    .clickable-word {
+        
+        font-size: 0.9rem; /* Match #text-content */
+    }
+
+    .clickable-word.highlighted {
+        color: #FFDB80;
+        
+        background-color: rgba(255, 219, 128, 0.2); /* Faint highlight */
+    }
+}
+
+/* Questions Section */
+#questions-container {
+    padding: 20px;
+    word-wrap: break-word;
+    box-sizing: border-box;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    border: 3px solid #000;
+}
+
+#questions-container h2 {
+    font-size: 1.6rem;
+    color: #000;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: 900;
+}
+
+/* Multiple-Choice & True/False Section Headers */
+#mc-questions h3,
+#tf-questions h3 {
+    font-size: 1.3rem;
+    color: #000;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #FFDB80;
+    padding-bottom: 5px;
+    font-weight: 700;
+}
+
+.question-text {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Multiple-Choice Options */
+.mc-options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.mc-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: #FFF9E9;
+    border: 2px solid #000;
+    cursor: pointer;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.mc-option:hover {
+    background: #FFDB80;
+}
+
+.mc-option input {
+    margin-right: 10px;
+}
+
+/* True/False Options */
+.tf-options {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tf-option {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    background: #FFF9E9;
+    padding: 10px;
+    border: 2px solid #000;
+    cursor: pointer;
+    flex: 0 1 auto;
+    max-width: 50%;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.tf-option:hover {
+    background: #FFDB80;
+}
+
+.tf-option input {
+    margin-right: 10px;
+}
+
+.question {
+    margin: 15px 0;
+}
+
+/* Feedback Styles */
+.mc-option.correct, .tf-option.correct {
+    background-color: #1CD071 !important;
+}
+
+.mc-option.incorrect, .tf-option.incorrect {
+    background-color: #EB3E40 !important;
+}
+
+/* Check Answers Button */
+#check-answers-button {
+    font-family: 'Lexend', sans-serif;
+    background-color: #FFDB80;
+    width: 100%;
+    min-height: 50px;
+    border: 3px solid #000;
+    font-size: 16px;
+    font-weight: 900;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+#check-answers-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Results Display */
+#results {
+    margin-top: 15px;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: #000;
+}
+
+/* Vocabulary Test Section */
+#words-in-text {
+    align-self: start;
+    min-height: 20px;
+    overflow: auto;
+    background: #FFF9E9;
+    padding: 15px;
+    border: 4px solid #FFDB80;
+    display: flex;
+    flex-direction: column;
+    position: static;
+    width: auto;
+}
+
+#words-in-text-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+
+#words-in-text-list li {
+    margin-bottom: 5px;
+    font-size: 1rem;
+    padding: 8px;
+    border-bottom: 2px solid #000;
+}
+
+#words-in-text-list li:last-child {
+    border-bottom: none;
+}
+
+#words-in-text-list li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+    background-color: #FFDB80;
+}
+
+#words-in-text strong {
+    color: #000;
+}
+
+/* Placeholder Styling */
+#words-in-text-placeholder {
+    font-style: italic;
+    color: #999;
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+/* Divider Styling */
+#words-in-text-divider {
+    border-top: 2px solid #000;
+    margin-bottom: 10px;
+}
+
+#buttons-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Button Styling */
+#start-vocab-test-button {
+    font-family: 'Lexend', sans-serif;
+    background-color: #FFDB80;
+    color: #000;
+    border: 3px solid #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: transform 0.2s ease;
+}
+
+#start-vocab-test-button:hover {
+    transform: translateY(-3px);
+}
+
+#reset-list-button {
+    color: #000;
+    background: #FFF9E9;
+    border: 3px solid #000;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: transform 0.2s ease;
+}
+
+#reset-list-button:hover {
+    transform: translateY(-3px);
+    background-color: #FFDB80;
+}
+
+/* Floating Button */
+#floating-word-list-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #FFDB80;
+    color: #000;
+    border: 3px solid #000;
+    border-radius: 50px;
+    width: 60px;
+    height: 60px;
+    font-size: 14px;
+    font-weight: 900;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.2s ease;
+    z-index: 1000;
+}
+
+#floating-word-list-button:hover {
+    transform: scale(1.1);
+}
+
+/* Back Button */
+#back-button {
+    padding: 12px 20px;
+    background-color: #FFDB80;
+    color: #000;
+    border: 3px solid #000;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 900;
+    transition: transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#back-button:hover {
+    transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+        min-width: 320px;
+    }
+
+    #all-content {
+        margin-top: 20px;
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 10px;
+    }
+
+    #text-and-questions {
+        padding: 15px;
+    }
+
+    .mc-option, .tf-option {
+        width: 100%;
+        max-width: none;
+    }
+
+    .tf-options {
+        flex-direction: column;
+        align-items: stretch;
+        padding: 10px;
+    }
+
+    .tf-option {
+        flex: none;
+        max-width: none;
+        width: 100%;
+        justify-content: flex-start;
+        margin-bottom: 10px;
+    }
+
+    #words-in-text {
+        position: fixed;
+        bottom: 80px;
+        right: 10px;
+        width: calc(100% - 40px);
+        max-width: 300px;
+        max-height: 60vh;
+        overflow-y: auto;
+        display: none;
+        z-index: 1000;
+        border: 4px solid #FFDB80;
+    }
+
+    #floating-word-list-button {
+        display: block;
+        right: 10px;
+        bottom: 10px;
+    }
+
+    #text-title {
+        font-size: 1.5rem;
+    }
+
+    #text-content {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .question-text {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    body {
+        padding: 5px;
+    }
+
+    #all-content {
+        padding: 0 5px;
+    }
+
+    #text-title {
+        font-size: 1.3rem;
+    }
+
+    .mc-option, .tf-option {
+        padding: 8px;
+        font-size: 0.9rem;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+}
+
+#all-content {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+* {
+    max-width: 100%;
+}

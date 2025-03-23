@@ -1,0 +1,72 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vocabulary Test</title>
+        <link rel="stylesheet" href="voctest.css">
+        <link rel="stylesheet" href="../global.css">
+        
+    </head>
+    
+    <body>
+        
+       <nav class="navbar">
+            <a href="../index.html" class="logo">Legivo</a>
+            <button class="menu-toggle">&#9776;</button> <!-- Hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search/search.html">Texts</a></li>  
+                <li><a href="../contact/contact.html">Contact</a></li> 
+            </ul>
+        </nav>
+        <h1>Vocabulary Test</h1>
+        <div class="container">
+            
+            <div id="synonyms-container"><h4>1 - Match the words with their synonyms.</h4>
+            </div>
+            <div id="match-synonyms-container">
+                <div class="words-container">
+                    <ul id="word-list" class="words"></ul>
+                </div>
+                
+                
+            </div>
+            <button id="check-synonyms-button" class="check-answers-button">Check Answers</button>
+            <div id="sentence-completion-partA">
+                <h4>2 - Complete the sentences with the correct words. </h2>
+                <div id="available-words-A" class="available-words">
+                    <!-- Words will be displayed here -->
+                </div>
+                <div id="sentences-A" class="sentences">
+                    <!-- Sentences with dropdowns will be here -->
+                </div>
+                
+            </div>
+            <button id="check-sentences-A-button" class="check-answers-button">Check Answers</button>
+            <div id="sentence-completion-partB">
+                <h4>3 - Complete the sentences with the correct words.</h2>
+                <div id="available-words-B" class="available-words">
+                    <!-- Words will be displayed here -->
+                </div>
+                <div id="sentences-B" class="sentences">
+                    <!-- Sentences with dropdowns will be here -->
+                </div>
+                
+            </div>
+            <button id="check-sentences-B-button" class="check-answers-button">Check Answers</button>
+        </div>
+        <footer class="footer">
+            <div class="full-width-wrapper">
+                <p>&copy; 2025 Legivo. All rights reserved.</p>
+            </div>
+        </footer>
+        <script>
+            document.querySelector('.menu-toggle').addEventListener('click', function () {
+                document.querySelector('.nav-links').classList.toggle('active');
+            });
+        </script>
+        <script type="module" src="voctest.js"></script>
+    </body>
+    </html>

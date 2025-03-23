@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap');
+
+body {
+    font-family: 'Lexend', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #FFF9E9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    max-width: 1240px;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 4px solid #FFDB80;
+    position: relative;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+/* Logo */
+.logo {
+    font-family: 'Lexend', sans-serif;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 900;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    background-color: transparent;
+    padding: 0.2rem 0.5rem;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    background: none;
+    border: 2px solid #000;
+    color: #000;
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+}
+
+/* Nav Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    font-family: 'Lexend', sans-serif;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 700;
+    
+    padding: 0.5rem;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-3px);
+    background-color: #FFDB80;
+    color: #000;
+}
+
+/* Remove redundant sections */
+#navigation {
+    display: none;
+}
+
+#menu {
+    display: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #FFF9E9; /* Default state, not visible until active */
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border-top: 2px solid #FFDB80;
+    }
+
+    .nav-links.active {
+        display: flex;
+        background: #F5EFD8; /* Slightly darker for contrast */
+        border: 3px solid #000; /* Bold neobrutalist border */
+        border-top: 2px solid #FFDB80; /* Consistent with non-active state */
+        z-index: 10; /* Ensure it’s above page content */
+    }
+
+    .nav-links li {
+        padding: 10px 0;
+    }
+
+    .nav-links a {
+        font-size: 1.5rem;
+        color: #000;
+        padding: 1rem;
+    }
+
+    .nav-links a:hover {
+        background-color: #FFDB80;
+        color: #000;
+    }
+
+    .navbar {
+        padding: 10px;
+    }
+}
+
+/* Subtle noise texture for neobrutalist grit */
+.navbar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}

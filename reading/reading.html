@@ -1,0 +1,78 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reading Page</title>
+        <link rel="stylesheet" href="reading.css">
+        <link rel="stylesheet" href="../global.css">
+        <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-51SFT33Q86"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-51SFT33Q86');
+</script>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Legivo</a>
+            <button class="menu-toggle">&#9776;</button> <!-- Hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search/search.html">Texts</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+            
+        <div id="all-content">
+            
+            <div id="text-and-questions">
+                <h1 id="text-title">Title goes here</h1>
+                <div id="text-content">
+                    
+                </div>
+                <div id="questions-container">
+                    <h2>Questions</h2>
+                    <div id="mc-questions">
+                        
+                    </div>
+                    <div id="tf-questions">
+                        
+                    </div>
+                    <button id="check-answers-button">Check Answers</button>
+                    <div id="results"></div>
+                </div>
+            </div>
+            <div id="words-in-text">
+                <p id="words-in-text-placeholder">Add a <span style="border-bottom: 1px solid #999; ">word</span> by clicking on it.</p>
+                <ul id="words-in-text-list"></ul>
+                <div id="words-in-text-divider"></div>
+                <div id="buttons-container">
+                    <button id="start-vocab-test-button">Start vocabulary test</button>
+                <button id="reset-list-button">Reset List</button>
+                </div>
+                
+            </div>
+            <button id="floating-word-list-button">Word 0</button>
+
+        </div>
+        
+    
+    <button id="back-button" onclick="history.back()">Back</button>
+    <footer class="footer">
+        <div class="full-width-wrapper">
+            <p>&copy; 2025 Legivo. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+        <script type="module" src="reading.js"></script>
+    </body>
+    </html>

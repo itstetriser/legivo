@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="global.css"> 
+    <!-- Google tag (gtag.js) -->
+
+</head>
+<body>
+    <main>  
+        <nav class="navbar">
+            <a href="../index.html" class="logo">Legivo</a>
+            <button class="menu-toggle">&#9776;</button> <!-- Hamburger icon -->
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="../search/search.html">Texts</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <section id="hero">
+            <div class="full-width-wrapper">
+                <div id="hero-content">
+                    <div id="hero-text">
+                        <h1>Study Vocabulary as You Read</h1>
+                        <p>No more writing down and forgetting difficult words—select and practice them instantly as you read.</p>
+                        <button id="find-texts-button">Explore Texts</button>
+                    </div>
+                    <div id="hero-image">
+                        <img src="hero-image.png" alt="Hero Image">
+                    </div>
+                </div>
+                <div id="hero-stats">
+                    <div id="text-number">
+                        <h3 class="stat-text-number">8</h3>
+                        <p class="stat-detail">Authentic reading texts with more to come</p>
+                    </div>
+                    <div id="word-number">
+                        <h3 class="stat-word-number">150</h3>
+                        <p class="stat-detail">Words with definitions and practice questions</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <section id="selected-texts">
+            <div class="full-width-wrapper">
+                <h4 class="selected-texts-title">We have selected some texts for you</h4>
+                <div class="selected-texts-container">
+                    <div class="selected-text" data-no="1" onclick="goToReadingPage(1)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">1</h5>
+                            
+                            <h5>The Marshall Plan</h5>
+                        </div>
+                        <p>Level: Medium</p>
+                        <p>Topic: History</p>
+                    </div>
+                    <div class="selected-text" data-no="2" onclick="goToReadingPage(8)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">8</h5>
+                            
+                            <h5>Financial Privilege</h5>
+                        </div>
+                        <p>Level: Hard</p>
+                        <p>Topic: Others</p>
+                    </div>
+                    <div class="selected-text" data-no="3" onclick="goToReadingPage(3)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">3</h5>
+                        
+                            <h5>Housing Market Crisis</h5>
+                        </div>
+                        <p>Level: Medium</p>
+                        <p>Topic: Others</p>
+                    </div>
+                    <div class="selected-text" data-no="4" onclick="goToReadingPage(4)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">4</h5>
+                            
+                            <h5>Deepseek</h5>
+                        </div>
+                        <p>Level: Medium</p>
+                        <p>Topic: Tech</p>
+                    </div>
+                    <div class="selected-text" data-no="5" onclick="goToReadingPage(5)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">5</h5>
+                            
+                            <h5>Honeybees</h5>
+                        </div>
+                        <p>Level: Medium</p>
+                        <p>Topic: Science</p>
+                    </div>
+                    <div class="selected-text" data-no="7" onclick="goToReadingPage(7)">
+                        <div id="text-card-title">
+                            <h5 class="text-no">7</h5>
+                          
+                            <h5>Did Dogs Domesticate Themselves?</h5>
+                        </div>
+                        <p>Level: Hard</p>
+                        <p>Topic: Science</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <script>
+            function goToReadingPage(no) {
+                window.location.href = `../reading/reading.html?no=${no}`;
+            }
+        </script>
+        
+    
+        <section id="call-to-action">
+            <div class="full-width-wrapper">
+                <div id="call-to-action-content">
+                    <div id="call-to-action-text">
+                        <h4>Find the text you want to read</h4>
+                        <p>Choose from carefully selected 45 texts on various topics.</p>
+                        <button id="find-texts-button">Find texts</button>
+                    </div>
+                </div>
+                <div id="call-to-action-words">
+                    <p class="word"> contract </p>
+                    <p class="word"> genius </p>
+                    <p class="word"> foretaste </p>
+                    <p class="word"> radical</p>
+                    <p class="word"> prospect </p>
+                    <p class="word"> desire </p>
+                </div>
+            </div>
+        </section>
+    
+        <footer class="footer">
+            <div class="full-width-wrapper">
+                <p>&copy; 2025 Legivo. All rights reserved.</p>
+            </div>
+        </footer>
+    </main>
+    
+
+    <script type="module" src="index.js"></script>
+    <script>
+        document.querySelector('.menu-toggle').addEventListener('click', function () {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
