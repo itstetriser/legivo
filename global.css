@@ -3,24 +3,25 @@
 /* Use CSS variables from index.css */
 :root {
     /* Colors */
-    --primary-blue: #2563eb;
-    --primary-blue-dark: #1d4ed8;
-    --primary-blue-light: #3b82f6;
-    --secondary-purple: #7c3aed;
-    --accent-green: #10b981;
-    --accent-orange: #f59e0b;
+    --primary-orange: #FF8C42;
+    --primary-orange-dark: #E67A35;
+    --primary-orange-light: #FFB366;
+    --secondary-blue: #4A90E2;
+    --accent-green: #27AE60;
+    --accent-purple: #8E44AD;
     
     /* Neutrals */
-    --gray-50: #f8fafc;
-    --gray-100: #f1f5f9;
-    --gray-200: #e2e8f0;
-    --gray-300: #cbd5e1;
-    --gray-400: #94a3b8;
-    --gray-500: #64748b;
-    --gray-600: #475569;
-    --gray-700: #334155;
-    --gray-800: #1e293b;
-    --gray-900: #0f172a;
+    --white: #FFFFFF;
+    --gray-50: #FAFAFA;
+    --gray-100: #F5F5F5;
+    --gray-200: #EEEEEE;
+    --gray-300: #E0E0E0;
+    --gray-400: #BDBDBD;
+    --gray-500: #9E9E9E;
+    --gray-600: #757575;
+    --gray-700: #424242;
+    --gray-800: #212121;
+    --gray-900: #0D0D0D;
     
     /* Typography */
     --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
@@ -63,7 +64,7 @@ body {
     font-family: var(--font-family);
     margin: 0;
     padding: 0;
-    background: var(--gray-50);
+    background: var(--white);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -103,7 +104,7 @@ body {
     text-decoration: none;
     font-size: 1.75rem;
     font-weight: var(--font-weight-extrabold);
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -119,7 +120,7 @@ body {
     left: 0;
     width: 0;
     height: 2px;
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
     transition: width var(--transition-normal);
 }
 
@@ -221,7 +222,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+    background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
     opacity: 0;
     transition: opacity var(--transition-normal);
     z-index: -1;
@@ -308,7 +309,7 @@ body {
     }
 
     .nav-links a:hover {
-        background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-purple) 100%);
+        background: linear-gradient(135deg, var(--primary-orange) 0%, var(--primary-orange-light) 100%);
         color: white;
         border-color: transparent;
     }
@@ -335,7 +336,7 @@ body {
 /* Focus styles for accessibility */
 button:focus-visible,
 a:focus-visible {
-    outline: 2px solid var(--primary-blue);
+    outline: 2px solid var(--primary-orange);
     outline-offset: 2px;
 }
 
