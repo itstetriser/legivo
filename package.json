@@ -1,0 +1,21 @@
+{
+  "name": "legivo-education-platform",
+  "version": "1.0.0",
+  "description": "Educational platform for vocabulary learning while reading",
+  "main": "index.html",
+  "scripts": {
+    "dev": "live-server --port=5503 --open=index.html",
+    "start": "live-server --port=5503 --open=index.html"
+  },
+  "keywords": [
+    "education",
+    "vocabulary",
+    "reading",
+    "learning"
+  ],
+  "author": "Legivo",
+  "license": "MIT",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  }
+}
